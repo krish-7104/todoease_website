@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 import { MdAdd, MdClear } from "react-icons/md";
 import "./styles/MainTodo.css";
 import Todo from "./Todo";
@@ -90,6 +91,7 @@ const MainTodo = () => {
           <MdAdd />
         </button>
       </form>
+      <Toaster position="bottom-right" />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 .navContainer {
   width: 100vw;
-  padding: 15px 25px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -10,6 +10,7 @@
   font-weight: 600;
   font-size: 24px;
   color: #181818;
+  cursor: pointer;
 }
 .navBtns {
   display: flex;
@@ -19,20 +20,42 @@
   border: 0;
   padding: 8px 20px;
   color: #181818;
-  border-radius: 4px;
-  margin-right: 15px;
+  border-radius: 6px;
   font-weight: 500;
   font-size: 15px;
   cursor: pointer;
-  transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.signupNavBtn {
-  background-color: #181818;
-  border: 0;
-  color: #e5e5e5;
-  padding: 8px 20px;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 15px;
+.googleIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6px;
+  font-size: 18px;
+}
+.hoverMenuDiv {
+  position: relative;
+  display: inline-block;
+}
+.menuIconBtn {
+  background-color: inherit;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.menuList {
+  position: absolute;
+  right: 0;
+  min-width: 160px;
+  background-color: #e8eaed;
+  padding: 10px;
+  border-radius: 6px;
+}
+.menuItem {
+  list-style: none;
+  font-size: 14px;
+  margin: 6px;
   cursor: pointer;
 }
