@@ -1,0 +1,29 @@
+.navContainer {
+  width: 100vw;
+  margin: 15px 25px;
+}
+.navTitle {
+  font-weight: 600;
+  font-size: 22px;
+}
+.loginNavBtn {
+  background-color: #e3e3e3;
+  border: 0;
+  padding: 8px 20px;
+  color: #181818;
+  border-radius: 4px;
+  margin-right: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+.signupNavBtn {
+  background-color: #181818;
+  border: 0;
+  color: #e5e5e5;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
