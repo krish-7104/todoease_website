@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Toaster } from "react-hot-toast";
-import { MdAdd, MdClear } from "react-icons/md";
+import { MdAdd } from "react-icons/md";
 import "./styles/MainTodo.css";
 import Todo from "./Todo";
 import { onAuthStateChanged } from "firebase/auth";
