@@ -119,16 +119,7 @@ const MainTodo = () => {
           </div>
         )}
       </div>
-      {todos.length !== 0 && (
-        <div className="clearTodoDiv">
-          <button className="clearTodoBtn" onClick={removeAllTodoHandler}>
-            Clear All
-            <span className="clearTodoIcon">
-              <MdClear />
-            </span>
-          </button>
-        </div>
-      )}
+
       <form className="todoInputDiv">
         <input
           type="text"

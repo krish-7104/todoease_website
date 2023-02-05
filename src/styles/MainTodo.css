@@ -29,6 +29,7 @@
   padding: 0 10px;
   outline: 0;
   font-size: 14.5px;
+  width: 100%;
 }
 .addTodoBtn {
   background-color: #e8eaed;
@@ -60,32 +61,4 @@
   font-size: 14px;
   margin-bottom: 20px;
   margin-top: 40px;
-}
-.clearTodoDiv {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  margin-bottom: 10px;
-}
-.clearTodoBtn {
-  background-color: inherit;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  margin-right: 6px;
-  cursor: pointer;
-  transition: 0.5s ease;
-}
-.clearTodoBtn:hover {
-  color: #f87171;
-  transition: 0.5s ease;
-}
-.clearTodoIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 2px;
-  font-size: 18px;
 }

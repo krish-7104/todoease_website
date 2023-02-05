@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import "./styles/DownloadApp.css";
 import { HiOutlineDownload } from "react-icons/hi";
 const DownloadApp = () => {
+  useEffect(() => {
+    document.title = "Donwload App - TodoEase";
+  }, []);
   return (
     <div className="container">
       <Navbar />
-
       <div className="appMainDiv">
         <div className="appDescription">
           <p className="appTitle">

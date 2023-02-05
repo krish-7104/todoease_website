@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./styles/Navbar.css";
-import { FcGoogle, FcMenu } from "react-icons/fc";
+import { FcGoogle } from "react-icons/fc";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import {
   signInWithPopup,
@@ -15,6 +15,7 @@ const Navbar = () => {
   const [userData, setUserData] = useState();
   const [path, setPath] = useState("");
   const root = useLocation();
+
   useEffect(() => {
     setPath(root.pathname);
     onAuthStateChanged(auth, (user) => {
@@ -69,7 +70,14 @@ const Navbar = () => {
                     Home
                   </li>
                 )}
-                <li className="menuItem">My Account</li>
+                {path !== "/myaccount" && (
+                  <li
+                    className="menuItem"
+                    onClick={() => navigate("/myaccount")}
+                  >
+                    My Account
+                  </li>
+                )}
                 {path !== "/app" && (
                   <li className="menuItem" onClick={() => navigate("/app")}>
                     Download App
