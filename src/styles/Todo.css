@@ -1,0 +1,25 @@
+.individualTodo {
+  background-color: #fff;
+  width: 85%;
+  margin: 0 auto 16px auto;
+  padding: 12px 15px 12px 10px;
+  border-radius: 4px;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+.todoText {
+  font-size: 16px;
+  margin: 0 8px;
+}
+.removeTodoBtn {
+  z-index: 1;
+  background-color: inherit;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #f87171;
+  cursor: pointer;
+}

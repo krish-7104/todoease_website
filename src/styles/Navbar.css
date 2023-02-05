@@ -1,21 +1,30 @@
 .navContainer {
   width: 100vw;
-  margin: 15px 25px;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
 }
 .navTitle {
   font-weight: 600;
-  font-size: 22px;
+  font-size: 24px;
+  color: #181818;
+}
+.navBtns {
+  display: flex;
 }
 .loginNavBtn {
-  background-color: #e3e3e3;
+  background-color: #e8eaed;
   border: 0;
   padding: 8px 20px;
   color: #181818;
   border-radius: 4px;
-  margin-right: 10px;
+  margin-right: 15px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 .signupNavBtn {
   background-color: #181818;
@@ -24,6 +33,6 @@
   padding: 8px 20px;
   border-radius: 4px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
 }

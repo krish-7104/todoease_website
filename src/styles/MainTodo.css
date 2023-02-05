@@ -1,0 +1,91 @@
+.todoContainer {
+  background-color: #e8eaed;
+  padding: 20px;
+  width: 42vw;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+}
+.todoDivTitle {
+  font-weight: 600;
+  font-size: 22px;
+  text-align: center;
+}
+.todoShowDiv {
+  margin: 20px 0;
+  height: 50vh;
+  overflow: scroll;
+}
+.todoInputDiv {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 8px;
+  border-radius: 8px;
+}
+.addTodoInput {
+  background-color: #fff;
+  border: none;
+  padding: 0 10px;
+  outline: 0;
+  font-size: 14.5px;
+}
+.addTodoBtn {
+  background-color: #e8eaed;
+  border: none;
+  margin-right: 4px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.noTodoDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  flex-direction: column;
+}
+.noTodoImage {
+  width: 300px;
+}
+.noTodo {
+  text-align: center;
+  color: #181818;
+  letter-spacing: 0.2px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.clearTodoDiv {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.clearTodoBtn {
+  background-color: inherit;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-right: 6px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.clearTodoBtn:hover {
+  color: #f87171;
+  transition: 0.5s ease;
+}
+.clearTodoIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+  font-size: 18px;
+}
