@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import "./styles/DownloadApp.css";
 import { HiOutlineDownload } from "react-icons/hi";
 import { toast, Toaster } from "react-hot-toast";
+import { motion } from "framer-motion";
+
 const DownloadApp = () => {
   useEffect(() => {
     document.title = "Download App - TodoEase";
@@ -14,28 +16,70 @@ const DownloadApp = () => {
       "_self"
     );
   };
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.1,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
     <div className="container">
       <Navbar />
       <div className="appMainDiv">
         <div className="appDescription">
-          <p className="appTitle">
+          <motion.p
+            className="appTitle"
+            variants={container}
+            initial="hidden"
+            animate="visible"
+          >
             Download <span className="highlight">TodoEase</span> App Now
-          </p>
-          <p className="appSubTitle">
+          </motion.p>
+          <motion.p
+            className="appSubTitle"
+            variants={container}
+            initial="hidden"
+            animate="visible"
+          >
             "Sync All Todo's On The App To Increase 100x Productivity"
-          </p>
-          <ul className="appDesc">
-            <li className="appDesList">Minimal App UI</li>
-            <li className="appDesList">Sync Your Todo's</li>
-            <li className="appDesList">User Friendly</li>
-            <li className="appDesList">No ADS</li>
-          </ul>
+          </motion.p>
+          <motion.ul
+            className="appDesc"
+            variants={container}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.li className="appDesList" variants={item}>
+              Minimal App UI
+            </motion.li>
+            <motion.li className="appDesList" variants={item}>
+              Sync Your Todo's
+            </motion.li>
+            <motion.li className="appDesList" variants={item}>
+              User Friendly
+            </motion.li>
+            <motion.li className="appDesList" variants={item}>
+              No ADS
+            </motion.li>
+          </motion.ul>
           <div className="appDownArea">
             <div className="qrArea">
               <img
+                loading="lazy"
                 className="qrCode"
-                src="https://firebasestorage.googleapis.com/v0/b/todoease.appspot.com/o/App%20Data%2Fqrcode.png?alt=media&token=6c289878-1429-4188-a6f2-6cdb67a8dd00"
+                src={require("./assets/qrcode.webp")}
                 alt=""
               />
             </div>
@@ -48,6 +92,7 @@ const DownloadApp = () => {
           </div>
         </div>
         <img
+          loading="lazy"
           src={require("./assets/todoease_app.png")}
           alt="todoease app"
           className="appPreviewImage"
