@@ -3,67 +3,17 @@ import { Toaster } from "react-hot-toast";
 import { MdAdd } from "react-icons/md";
 import "./styles/MainTodo.css";
 import Todo from "./Todo";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth, db } from "./backend/config";
-import {
-  doc,
-  getDoc,
-  serverTimestamp,
-  setDoc,
-  updateDoc,
-} from "firebase/firestore";
 const MainTodo = () => {
   const [todos, setTodos] = useState([]);
   const [todoInput, setTodoInput] = useState("");
-  const [userData, setUserData] = useState();
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUserData({
-          name: user.displayName,
-          uid: user.uid,
-        });
-        getTodoDatabase(user.uid);
-      } else {
-        getTodoLocal();
-      }
-    });
+    getTodoLocal();
   }, []);
 
   useEffect(() => {
     setTodoLocal();
-    userData && removeTodoDatabase(userData.uid);
   }, [todos]);
-
-  const getTodoDatabase = async (uid) => {
-    const docRef = doc(db, "userTodos", uid);
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      setTodos(docSnap.data().todos);
-    } else {
-    }
-  };
-
-  const removeTodoDatabase = async (uid) => {
-    const removeTodo = doc(db, "userTodos", uid);
-    const docSnap = await getDoc(removeTodo);
-    if (docSnap.exists()) {
-      await updateDoc(removeTodo, {
-        todos,
-        timestamp: serverTimestamp(),
-      });
-    } else {
-      setTodoDatabase();
-    }
-  };
-
-  const setTodoDatabase = async () => {
-    await setDoc(doc(db, "userTodos", userData.uid), {
-      todos,
-      timestamp: serverTimestamp(),
-    });
-  };
 
   const getTodoLocal = () => {
     const value = localStorage.getItem("todos");
@@ -88,9 +38,6 @@ const MainTodo = () => {
   const removeTodoHandler = (value) => {
     console.log(todos.filter((x) => x !== value));
     setTodos(todos.filter((x) => x !== value));
-  };
-  const removeAllTodoHandler = () => {
-    setTodos([]);
   };
   return (
     <div className="todoContainer">

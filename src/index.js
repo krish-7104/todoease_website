@@ -4,7 +4,7 @@ import App from "./App";
 import "./styles/index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DownloadApp from "./DownloadApp";
-import Account from "./Account";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
@@ -12,7 +12,6 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/app" element={<DownloadApp />} />
-        <Route path="/myaccount" element={<Account />} />
       </Routes>
     </BrowserRouter>
   </>

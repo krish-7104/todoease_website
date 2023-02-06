@@ -31,6 +31,7 @@
   height: 480px;
   object-fit: contain;
   width: 45%;
+  margin-top: 60px;
 }
 .appDesList {
   list-style: none;
@@ -41,7 +42,7 @@
   margin-right: 20px;
   font-size: 14px;
 }
-.appBtnArea {
+.appDownArea {
   display: flex;
   justify-content: flex-start;
   margin-top: 30px;
@@ -52,12 +53,20 @@
   font-weight: 500;
   background-color: #181818;
   color: #e8eaed;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: 0.5s ease;
+  border: 1.2px solid #181818;
+}
+.downloadAppBtn:hover {
+  scale: 1.1;
+  transition: 0.5s ease;
+  background-color: #e8eaed;
+  color: #181818;
 }
 .downIcon {
   display: flex;
@@ -65,4 +74,26 @@
   align-items: center;
   font-size: 20px;
   margin-left: 8px;
+}
+.qrArea {
+  background-color: #e8eaed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 60px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 8px;
+}
+.qrCode {
+  width: 180px;
+  border-radius: 4px;
+}
+.downBtnArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

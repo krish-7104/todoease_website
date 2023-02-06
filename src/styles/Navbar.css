@@ -10,52 +10,58 @@
   font-weight: 600;
   font-size: 24px;
   color: #181818;
+  transition: 0.5s ease;
   cursor: pointer;
 }
-.navBtns {
-  display: flex;
+.navTitle:hover {
+  transition: 0.5s ease;
+  scale: 1.1;
 }
-.loginNavBtn {
-  background-color: #e8eaed;
-  border: 0;
-  padding: 8px 20px;
-  color: #181818;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 15px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.googleIcon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 6px;
-  font-size: 18px;
-}
-.hoverMenuDiv {
-  position: relative;
-  display: inline-block;
-}
-.menuIconBtn {
-  background-color: inherit;
+.appDownBtn {
+  color: #e8eaed;
   border: none;
-  font-size: 24px;
+  padding: 6px 12px;
+  border-radius: 4px;
   cursor: pointer;
+  background-color: #181818;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+  border: 1.2px solid #181818;
 }
-.menuList {
-  position: absolute;
-  right: 0;
-  min-width: 160px;
+.appDownBtn:hover {
   background-color: #e8eaed;
-  padding: 10px;
-  border-radius: 6px;
+  color: #181818;
+  transition: 0.5s ease;
 }
-.menuItem {
-  list-style: none;
-  font-size: 14px;
-  margin: 6px;
+.downIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appBackBtn {
+  color: #181818;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
   cursor: pointer;
+  background-color: #e8eaed;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+.appBackBtn:hover {
+  scale: 1.1;
+  transition: 0.5s ease;
+}
+.backIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 18px;
 }
