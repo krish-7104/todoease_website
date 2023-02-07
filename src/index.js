@@ -10,8 +10,8 @@ root.render(
   <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/app" element={<DownloadApp />} />
+        <Route path="/web" element={<App />} />
+        <Route path="/" element={<DownloadApp />} />
       </Routes>
     </BrowserRouter>
   </>

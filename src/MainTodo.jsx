@@ -3,6 +3,8 @@ import { Toaster } from "react-hot-toast";
 import { MdAdd } from "react-icons/md";
 import "./styles/MainTodo.css";
 import Todo from "./Todo";
+import { motion } from "framer-motion";
+
 const MainTodo = () => {
   const [todos, setTodos] = useState([]);
   const [todoInput, setTodoInput] = useState("");
@@ -39,10 +41,27 @@ const MainTodo = () => {
     console.log(todos.filter((x) => x !== value));
     setTodos(todos.filter((x) => x !== value));
   };
+
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.1,
+        staggerChildren: 0.2,
+      },
+    },
+  };
   return (
     <div className="todoContainer">
       <p className="todoDivTitle">Your Todo's</p>
-      <div className="todoShowDiv">
+      <motion.div
+        className="todoShowDiv"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
         {todos &&
           todos.map((todo, index) => {
             return (
@@ -56,7 +75,7 @@ const MainTodo = () => {
         {todos.length === 0 && (
           <div className="noTodoDiv">
             <img
-              src={require("./assets/noTodo.png")}
+              src={require("./assets/noTodo.webp")}
               className="noTodoImage"
               alt="No Todo"
             />
@@ -65,7 +84,7 @@ const MainTodo = () => {
             </p>
           </div>
         )}
-      </div>
+      </motion.div>
 
       <form className="todoInputDiv">
         <input
@@ -79,6 +98,7 @@ const MainTodo = () => {
           <MdAdd />
         </button>
       </form>
+
       <Toaster position="bottom-right" />
     </div>
   );

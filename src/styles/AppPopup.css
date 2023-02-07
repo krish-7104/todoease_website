@@ -1,0 +1,39 @@
+.popupApp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e8eaed;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  margin: 20px;
+  scale: 0.9;
+  transition: 0.5s ease;
+}
+.popupApp:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  scale: 1;
+  transition: 0.5s ease;
+}
+.logoPopup {
+  width: 50px;
+  object-fit: contain;
+}
+.textPopupArea {
+  margin: 0 12px;
+}
+.popupTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+.popupSubTitle {
+  font-size: 14px;
+}
+@media only screen and (max-width: 800px) {
+  .popupApp {
+    position: unset;
+  }
+}

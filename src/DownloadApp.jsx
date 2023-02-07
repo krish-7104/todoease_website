@@ -4,7 +4,7 @@ import "./styles/DownloadApp.css";
 import { HiOutlineDownload } from "react-icons/hi";
 import { toast, Toaster } from "react-hot-toast";
 import { motion } from "framer-motion";
-
+import Footer from "./Footer";
 const DownloadApp = () => {
   useEffect(() => {
     document.title = "Download App - TodoEase";
@@ -35,7 +35,7 @@ const DownloadApp = () => {
     },
   };
   return (
-    <div className="container">
+    <div className="container downloadContainer">
       <Navbar />
       <div className="appMainDiv">
         <div className="appDescription">
@@ -53,7 +53,7 @@ const DownloadApp = () => {
             initial="hidden"
             animate="visible"
           >
-            "Sync All Todo's On The App To Increase 100x Productivity"
+            "Create Todo List And Increase 100x Productivity"
           </motion.p>
           <motion.ul
             className="appDesc"
@@ -93,12 +93,21 @@ const DownloadApp = () => {
         </div>
         <img
           loading="lazy"
-          src={require("./assets/todoease_app.png")}
+          src={require("./assets/todoease_app.webp")}
           alt="todoease app"
           className="appPreviewImage"
         />
+        <motion.p
+          className="appTitleMob"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+          TodoEase
+        </motion.p>
       </div>
       <Toaster position="bottom-center" />
+      <Footer />
     </div>
   );
 };

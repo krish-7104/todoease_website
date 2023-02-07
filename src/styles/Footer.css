@@ -1,0 +1,23 @@
+.footerDiv {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 12px;
+}
+.footerText {
+  color: #181818;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.5s ease;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+.footerText:hover {
+  background-color: #e8eaed;
+  transition: 0.5s ease;
+}
+@media only screen and (max-width: 800px) {
+  .footerDiv {
+    position: unset;
+    margin-bottom: 10px;
+  }
+}

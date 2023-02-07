@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./styles/Navbar.css";
 import { HiOutlineDownload } from "react-icons/hi";
-import { BiArrowBack } from "react-icons/bi";
+import { BiArrowToRight } from "react-icons/bi";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -12,20 +12,20 @@ const Navbar = () => {
       <p className="navTitle" onClick={() => navigate("/")}>
         TodoEase
       </p>
-      {path.pathname !== "/app" && (
-        <button className="appDownBtn" onClick={() => navigate("/app")}>
+      {path.pathname !== "/" && (
+        <button className="appDownBtn" onClick={() => navigate("/")}>
           Download App{" "}
           <span className="downIcon">
             <HiOutlineDownload />
           </span>
         </button>
       )}
-      {path.pathname === "/app" && (
-        <button className="appBackBtn" onClick={() => navigate("/")}>
+      {path.pathname === "/" && (
+        <button className="appBackBtn" onClick={() => navigate("/web")}>
+          Todo Web
           <span className="backIcon">
-            <BiArrowBack />
+            <BiArrowToRight />
           </span>
-          Back Home
         </button>
       )}
     </div>

@@ -23,3 +23,10 @@
   color: #f87171;
   cursor: pointer;
 }
+@media only screen and (max-width: 800px) {
+  .individualTodo {
+    width: 100%;
+    margin: 0 auto 16px auto;
+    padding: 10px 14px 10px 10px;
+  }
+}
