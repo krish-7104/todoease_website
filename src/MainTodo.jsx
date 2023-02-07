@@ -32,9 +32,11 @@ const MainTodo = () => {
 
   const addTodoHandler = (e) => {
     e.preventDefault();
-    setTodos((prev) => [...prev, todoInput]);
-    setTodoInput("");
-    setTodoLocal();
+    if (todoInput !== "" && todoInput !== " ") {
+      setTodos((prev) => [...prev, todoInput]);
+      setTodoInput("");
+      setTodoLocal();
+    }
   };
 
   const removeTodoHandler = (value) => {
